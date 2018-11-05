@@ -42,4 +42,22 @@ export class AppComponent {
     this.statusText = this.status ? "Show" : "Hide"
     this.statusTextButton = this.status ? "Hide" : "Show"
   }
+  allUser = [];
+  getAllUser() {
+    this.allUser = [
+      {
+        id: 1,
+        name: 'test1'
+      },
+      {
+        id: 2,
+        name: 'test2'
+      },
+      {
+        id: 3,
+        name: 'test3'
+      }
+    ]
+  }
+
 }

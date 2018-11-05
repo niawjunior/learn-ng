@@ -40,4 +40,14 @@
   <button (click)="changeStatus()">{{ statusTextButton }}</button>
   <h4 *ngIf="status">Pasupol Bunsaen</h4>
 </div>
-
+<div>
+  <button (click)="getAllUser()">click to show all user</button>
+  <ul>
+    <li *ngFor="let item of allUser">ID: {{item.id}} NAME: {{item.name}}</li>
+  </ul>
+</div>
+<div>
+  <input type="text" #leftBox>
+  <button (click)="rightBox.value = leftBox.value">>>></button>
+  <input type="text" #rightBox>
+</div>
