@@ -11,16 +11,9 @@ export class AppComponent {
   username = "input your name";
   showName = "input your name";
   isAdmin = true;
+  styles = "styleAdmin"
+  guest = "Admin"
   
-  guest = {
-    text: this.isAdmin ? "Admin" : "Guest",
-  }
-  styles = {
-    'font-family': this.isAdmin ? "italic" : "normal",
-    'font-size': this.isAdmin ? "24px" : "16px",
-    'font-weight': this.isAdmin ? "200px" : "0px",
-    'color': this.isAdmin ? "#111111" : "#4af767"
-  }
   getAvailableRoom() {
     return this.availableRoom;
   }
@@ -34,5 +27,10 @@ export class AppComponent {
   }
   checkAvailableRoom() {
     return this.availableRoom == 0 ? true : false
+  }
+  switchUser() {
+    this.isAdmin = !this.isAdmin
+    this.styles = this.isAdmin ? "styleAdmin" : "styleGuest"
+    this.guest = this.isAdmin ? "Admin" : "Guest"
   }
 }

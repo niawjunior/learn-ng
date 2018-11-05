@@ -26,7 +26,12 @@
   <h4>{{ username }}</h4>
 </div>
 <div style="text-align:center;">
-  <p [ngStyle]="styles">
-    Welcome {{ guest.text }}
+  <p [ngClass]="[styles]">
+    Welcome {{ guest }}
   </p>
+</div>
+<div style="text-align:center">
+  <h4>Login {{ isAdmin }}</h4>
+  <button (click)=switchUser()>Switch User</button>
+  <!-- <button (click)="isAdmin = !isAdmin">Switch User</button> -->
 </div>
