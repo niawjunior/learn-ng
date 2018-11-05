@@ -36,7 +36,8 @@
   <!-- <button (click)="isAdmin = !isAdmin">Switch User</button> -->
 </div>
 <div style="margin-top:10px;">
-  <h4>{{ statusText }}</h4>
+  <h4>Status {{ statusText }}</h4>
   <button (click)="changeStatus()">{{ statusTextButton }}</button>
+  <h4 *ngIf="status">Pasupol Bunsaen</h4>
 </div>
 
