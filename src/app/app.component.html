@@ -10,7 +10,7 @@
 </div>
 <br>
 <div style="text-align:center">
-    <input type="number" (input)="availableRoom = $event.target.value" bind-value="getAvailableRoom()"/>
+    <input type="number" [(ngModel)]="availableRoom"/>
 </div>
 <br>
 <div style="text-align:center">
