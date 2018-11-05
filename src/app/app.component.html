@@ -1,37 +1,42 @@
 <div>
-  <h1 style="text-align:center">
+  <h1>
       Hello {{ title }}!
   </h1>
 </div>
 <div>
-  <h2 style="text-align:center">
+  <h2>
       Available Room {{ getAvailableRoom() }}
   </h2>
 </div>
 <br>
-<div style="text-align:center">
+<div>
     <input type="number" [(ngModel)]="availableRoom"/>
 </div>
 <br>
-<div style="text-align:center">
+<div>
   <button (click)="reserveRoom()" [disabled]="checkAvailableRoom()">Reserve A Room </button>
 </div>
 <br>
-<div style="text-align:center">
+<div>
   <input type="text" (input)="show($event)"/>
   <h4>{{ showName }}</h4>
 </div>
-<div style="text-align:center">
+<div>
   <input (input)="username = $event.target.value">
   <h4>{{ username }}</h4>
 </div>
-<div style="text-align:center;">
+<div>
   <p [ngClass]="[styles]">
     Welcome {{ guest }}
   </p>
 </div>
-<div style="text-align:center">
+<div>
   <h4>Login {{ isAdmin }}</h4>
   <button (click)=switchUser()>Switch User</button>
   <!-- <button (click)="isAdmin = !isAdmin">Switch User</button> -->
 </div>
+<div style="margin-top:10px;">
+  <h4>{{ statusText }}</h4>
+  <button (click)="changeStatus()">{{ statusTextButton }}</button>
+</div>
+

@@ -13,7 +13,10 @@ export class AppComponent {
   isAdmin = true;
   styles = "styleAdmin"
   guest = "Admin"
-  
+  status = true;
+  statusText = "Show"
+  statusTextButton = "Hide"
+
   getAvailableRoom() {
     return this.availableRoom;
   }
@@ -32,5 +35,11 @@ export class AppComponent {
     this.isAdmin = !this.isAdmin
     this.styles = this.isAdmin ? "styleAdmin" : "styleGuest"
     this.guest = this.isAdmin ? "Admin" : "Guest"
+  }
+
+  changeStatus() {
+    this.status = !this.status;
+    this.statusText = this.status ? "Show" : "Hide"
+    this.statusTextButton = this.status ? "Hide" : "Show"
   }
 }
