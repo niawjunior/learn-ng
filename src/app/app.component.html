@@ -1,0 +1,32 @@
+<div>
+  <h1 style="text-align:center">
+      Hello {{ title }}!
+  </h1>
+</div>
+<div>
+  <h2 style="text-align:center">
+      Available Room {{ getAvailableRoom() }}
+  </h2>
+</div>
+<br>
+<div style="text-align:center">
+    <input type="number" (input)="availableRoom = $event.target.value" bind-value="getAvailableRoom()"/>
+</div>
+<br>
+<div style="text-align:center">
+  <button (click)="reserveRoom()" [disabled]="checkAvailableRoom()">Reserve A Room </button>
+</div>
+<br>
+<div style="text-align:center">
+  <input type="text" (input)="show($event)"/>
+  <h4>{{ showName }}</h4>
+</div>
+<div style="text-align:center">
+  <input (input)="username = $event.target.value">
+  <h4>{{ username }}</h4>
+</div>
+<div style="text-align:center;">
+  <p [ngStyle]="styles">
+    Welcome {{ guest.text }}
+  </p>
+</div>
